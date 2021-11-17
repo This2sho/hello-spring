@@ -1,8 +1,15 @@
 package hello.hellospring.domain;
 
+import org.springframework.stereotype.Controller;
+
+import javax.persistence.*;
+
+@Entity
 public class Member {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; //system 이 저장하는
+
     private String name;
 
     public Long getId() {
